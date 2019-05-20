@@ -8,8 +8,8 @@ describe('create-category', () => {
     const createCategory = createCategoryFactory({ ProductCategory })
 
     beforeEach(() => {
-        req.errors = {}
         req.body = {}
+        req.errors = {}
         ProductCategory.categories = []
     })
 
@@ -21,7 +21,6 @@ describe('create-category', () => {
     it('should respond with 409 if there is a name conflict', async () => {
         await createCategory({ ...req, body: { name: 'Grains' } }, res)
 
-        // repeat
         await createCategory({ ...req, body: { name: 'Grains' } }, res)
         expect(res.code).to.equal(409)
     })
