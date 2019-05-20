@@ -17,9 +17,3 @@ ProductCategory.findOne = ({ name }) => Promise.resolve(
 )
 
 module.exports = ProductCategory
-
-// const grains = new ProductCategory({ name: 'Grains' })
-
-// grains.save().then(savedGrains => {
-//     console.log(savedGrains)
-// })
