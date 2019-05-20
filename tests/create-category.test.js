@@ -35,6 +35,5 @@ describe('create-category', () => {
         ProductCategory.categories = null
         await createCategory({ ...req, body: { name: 'Grains' } }, res)
         expect(res.code).to.equal(500)
-        return
     })
 })
